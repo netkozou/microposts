@@ -22,13 +22,14 @@ class UsersController < ApplicationController
   
   def edit
     @user = User.find(params[:id])
-  
   end
   
   def update
     # @user = User.find(params[:id])
     if @user.update_attributes(user_params)
-      redirect_to root_path , notice: 'メッセージを編集しました'
+      # redirect_to root_path , notice: 'メッセージを編集しました'
+      # render 'show'
+      redirect_to user_path , notice: 'メッセージを編集しました'
     else
       # 保存に失敗した場合は編集画面へ戻す
       render 'edit'
@@ -44,7 +45,7 @@ class UsersController < ApplicationController
   
     def user_params
       params.require(:user).permit(:name, :email, :password,
-                                    :password_confirmation)
+                                    :password_confirmation,:location)
     end
   
       # ログイン済みユーザーかどうか確認
