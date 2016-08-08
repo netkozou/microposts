@@ -1,4 +1,7 @@
 <h1>
   <%= gravatar_for @user %>
-  <%= @user.name %>
-</h1>
+  <%= @user.name %><br>
+</h1> 
+
+  <div class="center"> <span class="glyphicon glyphicon-map-marker"></span> <%= @user.location %></div>
+  <div class="center"> <span class="glyphicon glyphicon-link"></span> <%= @user.email %></div>
