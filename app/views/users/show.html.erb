@@ -9,8 +9,8 @@
       <div class="center"> <span class="glyphicon glyphicon-map-marker"></span> <%= @user.location %></div>
       <div class="center"> <span class="glyphicon glyphicon-link"></span> <%= @user.email %></div>
     </section>
-    <div><%= link_to "Following",:action => "following" %></div>
-    <div><%= link_to "Follower",:action => "follower" %></div>
+    <div><%= link_to "Following",:action => "following" %> （<%= @user.following_users.count %>）</div>
+    <div><%= link_to "Follower",:action => "follower" %> （<%= @user.follower_users.count %>）</div>
   </aside>
   
   <div class="col-md-8">
