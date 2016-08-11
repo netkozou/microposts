@@ -3,6 +3,7 @@ class RelationshipsController < ApplicationController
 
   def create
     @user = User.find(params[:followed_id])
+    # puts("-----"+params[:followed_id])
     current_user.follow(@user)
   end
 

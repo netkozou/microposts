@@ -1,15 +1,16 @@
-<<<<<<< HEAD
 <div class="row">
   <aside class="col-md-4">
     <section class="user_info">
-<h1>
-  <%= gravatar_for @user %>
-  <%= @user.name %><br>
-</h1> 
+    <h1>
+      <%= gravatar_for @user %>
+      <%= @user.name %><br>
+    </h1> 
 
-  <div class="center"> <span class="glyphicon glyphicon-map-marker"></span> <%= @user.location %></div>
-  <div class="center"> <span class="glyphicon glyphicon-link"></span> <%= @user.email %></div>
+      <div class="center"> <span class="glyphicon glyphicon-map-marker"></span> <%= @user.location %></div>
+      <div class="center"> <span class="glyphicon glyphicon-link"></span> <%= @user.email %></div>
     </section>
+    <div><%= link_to "Following",:action => "following" %></div>
+    <div><%= link_to "Follower",:action => "follower" %></div>
   </aside>
   
   <div class="col-md-8">

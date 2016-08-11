@@ -1,10 +1,17 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root to: 'static_pages#home'
   get 'signup', to: 'users#new'
   get 'login' , to: 'sessions#new'
   post 'login' , to: 'sessions#create'
   delete 'logout' , to: 'sessions#destroy'
   # edit 'edit', to: 'sessions#edit'
+  
+  resources :users do
+    member do
+      get :following,:follower
+    end
+  end
   
   resources :users
   resources :microposts

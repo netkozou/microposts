@@ -2,6 +2,24 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:edit, :update]
   before_action :correct_user,   only: [:edit, :update]
   
+  # followingsにフォローしているユーザーを、followersにフォローされているユーザー
+  
+  def following
+     @title = "Following"
+     @user = User.find(params[:id])
+     @users = @user.following_users
+     render 'show_follow'
+  end
+  
+  def follower
+    @title = "Follower"
+    @user = User.find(params[:id])
+    @users = @user.follower_users
+    render 'show_follow'
+  
+  end
+    
+  
   def show
     @user = User.find(params[:id])
     @microposts = @user.microposts.order(created_at: :desc)
