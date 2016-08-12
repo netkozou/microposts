@@ -99,6 +99,7 @@ GEM
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
+    pg (0.18.4)
     pkg-config (1.1.7)
     rack (1.6.4)
     rack-pjax (0.8.0)
@@ -193,6 +194,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
+  pg
   rails (= 4.2.7)
   rails_admin
   rmagick
