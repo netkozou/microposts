@@ -31,6 +31,7 @@ gem 'rmagick'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+gem 'rails_admin'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -41,7 +42,7 @@ gem 'bcrypt', '~> 3.1.7'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  gem 'rails_admin'
+
 end
 
 group :development do
